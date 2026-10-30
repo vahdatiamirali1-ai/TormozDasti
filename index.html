@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us">
-  <head>
+<html lang="en-us"><head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Unity WebGL Player | Tormoz Dasti</title>
@@ -9,14 +8,14 @@
   </head>
   <body>
     <div id="unity-container" class="unity-desktop">
-      <canvas id="unity-canvas" width=960 height=600></canvas>
-      <div id="unity-loading-bar">
+      <canvas id="unity-canvas" width="960" height="600" style="width: 960px; height: 600px;"></canvas>
+      <div id="unity-loading-bar" style="display: block;">
         <div id="unity-logo"></div>
         <div id="unity-progress-bar-empty">
-          <div id="unity-progress-bar-full"></div>
+          <div id="unity-progress-bar-full" style="width: 0%;"></div>
         </div>
       </div>
-      <div id="unity-warning"> </div>
+      <div id="unity-warning" style="display: block;"> <div style="background: red; padding: 10px;">Failed to download file Build/TemplateData.data. Loading web pages via a file:// URL without a web server is not supported by this browser. Please use a local development web server to host Unity content, or use the Unity Build and Run option.</div></div>
       <div id="unity-footer">
         <div id="unity-webgl-logo"></div>
         <div id="unity-fullscreen-button"></div>
@@ -56,11 +55,11 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/MyGames.loader.js";
+      var loaderUrl = buildUrl + "/TemplateData.loader.js";
       var config = {
-        dataUrl: buildUrl + "/MyGames.data.gz",
-        frameworkUrl: buildUrl + "/MyGames.framework.js.gz",
-        codeUrl: buildUrl + "/MyGames.wasm.gz",
+        dataUrl: buildUrl + "/TemplateData.data",
+        frameworkUrl: buildUrl + "/TemplateData.framework.js",
+        codeUrl: buildUrl + "/TemplateData.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
         productName: "Tormoz Dasti",
@@ -112,8 +111,7 @@
         });
       };
       document.body.appendChild(script);
-    </script>
-   TormozDasti
-  </body>
-</html>
+    </script><script src="Build/TemplateData.loader.js"></script>
+  
 
+<script src="Build/TemplateData.framework.js"></script></body></html>
